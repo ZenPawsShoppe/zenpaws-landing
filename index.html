@@ -7,21 +7,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter&display=swap" rel="stylesheet">
   <style>
     /* 🌐 Base styles and scrolling behavior */
-    html, body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      height: 100%;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      font-family: 'Inter', sans-serif;
-      background-color: #F7F4F0;
-      color: #333;
-      line-height: 1.6;
-    }
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+  overflow: hidden; /* Prevent dual scrollbars */
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;     /* Make space for fixed header */
+  padding-bottom: 120px;  /* Make space for fixed footer */
+  height: 100vh;
+  overflow-y: scroll;     /* Only body should scroll */
+  font-family: 'Inter', sans-serif;
+  background-color: #F7F4F0;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
     /* 📌 Snapping section container */
     .snap-section {
