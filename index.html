@@ -189,6 +189,20 @@
     background-attachment: scroll;
   }
 }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
 </style>
 </head>
 <body>
@@ -236,7 +250,18 @@
     <a class="cta-button" href="#">Get Yours Now – $39.99</a>
   </section>
 
-  <!-- 📜 Footer Section -->
+  <!-- 🐶 Photo Grid Section -->
+  <section class="snap-section">
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">ZenPaws Moments</h2>
+    <div class="photo-grid">
+      <img src="resources/img2.png" alt="Dog on Bed 2">
+      <img src="resources/img3.png" alt="Dog on Bed 3">
+      <img src="resources/img4.png" alt="Dog on Bed 4">
+      <img src="resources/img5.png" alt="Dog on Bed 5">
+    </div>
+  </section>
+
+<!-- 📜 Footer Section -->
   <footer>
     &copy; 2025 ZenPaws Co. &nbsp;|&nbsp; Privacy · Refund · Terms
   </footer>
