@@ -25,6 +25,9 @@
       height: 100vh;
     }
     .snap-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
       scroll-snap-align: start;
       min-height: 100vh;
     }
@@ -59,11 +62,14 @@
       background-color: #8a715e;
     }
     section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  margin: 0 auto;
+}
     .welcome {
+  max-width: 800px;
       background: #fff;
       padding: 40px;
       border-radius: 10px;
@@ -127,6 +133,7 @@
       margin-bottom: 20px;
     }
     .reviews {
+  max-width: 800px;
       background: #fff;
       padding: 30px;
       border-radius: 10px;
