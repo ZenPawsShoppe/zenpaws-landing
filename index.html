@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter&display=swap" rel="stylesheet">
   <style>
     html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
       margin: 0;
       padding: 0;
       height: 100%;
@@ -171,83 +174,20 @@
 <body>
   
 
-    <div class="scroll-snap-wrapper">
     <section class="snap-section">
-      <header style="background-color: #EADBD0; text-align: center; padding: 60px 20px 40px;">
-        <h1 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 10px; color: #5A6B57;">Soothing the world, one paw at a time</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 20px; color: #5A6B57;">Comfort, calm, and connection—designed for modern pets and their humans.</p>
-        <a class="cta-button" href="#product">Shop The Calm Bed</a>
-      </header>
-    </section>
+  <header style="background-color: #EADBD0; text-align: center; padding: 60px 20px 40px;">
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 10px; color: #5A6B57;">Soothing the world, one paw at a time</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 20px; color: #5A6B57;">Comfort, calm, and connection—designed for modern pets and their humans.</p>
+    <a class="cta-button" href="#product">Shop The Calm Bed</a>
+  </header>
+</section>
 
-    <section class="welcome snap-section">
-      We believe pets deserve peace, just like people do. That’s why we create simple tools that help them settle, rest, and feel safe — one moment at a time.
-    </section>
-    
-    <section class="snap-section image-only" style="background-image: url('https://zenpawsco.github.io/zenpaws-landing/resources/img1.png'); background-size: cover; background-position: center;"></section>
+<section class="welcome snap-section">
+  We believe pets deserve peace, just like people do. That’s why we create simple tools that help them settle, rest, and feel safe — one moment at a time.
+</section>
 
-    <section class="snap-section image-with-text" style="background-image: url('resources/img1.png'); background-size: cover; background-position: center; position: relative;">
-      <style>
-        .image-with-text::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.4);
-          z-index: 1;
-        }
-        .image-with-text .content {
-          position: relative;
-          z-index: 2;
-          color: white;
-          text-align: center;
-        }
-        .image-with-text .how-it-feels .feel-block {
-          background: rgba(255, 255, 255, 0.15);
-          border-color: rgba(255,255,255,0.3);
-        }
-      </style>
-      <div class="content">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem;">How It Feels</h2>
-        <div class="how-it-feels">
-          <div class="feel-block">Your pup curls into the donut bed<br><strong>→ Relief</strong></div>
-          <div class="feel-block">Soft licking motion on the mat<br><strong>→ Focused calm</strong></div>
-          <div class="feel-block">You sip tea as they sleep peacefully<br><strong>→ Presence</strong></div>
-        </div>
-      </div>
-    </section>
-      <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">How It Feels</h2>
-      <div class="how-it-feels">
-        <div class="feel-block">Your pup curls into the donut bed<br><strong>→ Relief</strong></div>
-        <div class="feel-block">Soft licking motion on the mat<br><strong>→ Focused calm</strong></div>
-        <div class="feel-block">You sip tea as they sleep peacefully<br><strong>→ Presence</strong></div>
-      </div>
-    </section>
-
-    <section class="snap-section">
-      <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">Why Pet Parents Love ZenPaws</h2>
-      <div class="benefits-upgraded">
-        <div class="benefit-upgraded">“She actually stays calm through thunderstorms now.”<br><small>Our calming bed and enrichment tools support real emotional regulation — not just comfort.</small></div>
-        <div class="benefit-upgraded">“It’s like a weighted blanket for her nerves.”<br><small>Raised rims and orthopedic softness give pets a safe, structured space to rest deeply.</small></div>
-        <div class="benefit-upgraded">“It arrived in two days and changed everything.”<br><small>Fast U.S. shipping, hassle-free setup, and instant integration into your pet’s routine.</small></div>
-      </div>
-    </section>
-
-    <section class="product-section snap-section" id="product">
-      <h2 style="font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">The Bed They Deserve</h2>
-      <img src="https://via.placeholder.com/600x400.png?text=ZenPaws+Donut+Bed" alt="Calming Donut Bed">
-      <p style="max-width: 600px; color: #4A5B46;">Orthopedic support, raised rims for security, and a cloud-soft surface—trusted by 10,000+ cozy pets.</p>
-      <a class="cta-button" href="#">Get Yours Now – $39.99</a>
-    </section>
-
-    <section class="reviews snap-section">
-      <h3 style="font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 1.5rem;">What Customers Say</h3>
-      <p class="review">“My rescue finally sleeps through the night.”</p>
-      <p class="review">“Best thing I’ve bought for my anxious pup.”</p>
-      <p class="review">“The moment I unboxed it, she curled right in.”</p>
-    </section>
-  </div>
-
-  <footer>
+
+<footer>
     &copy; 2025 ZenPaws Co. &nbsp;|&nbsp; Privacy · Refund · Terms
   </footer>
 <script>
