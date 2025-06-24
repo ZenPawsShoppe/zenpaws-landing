@@ -143,7 +143,30 @@
       font-size: 0.9rem;
       color: #5A6B57;
     }
-  </style>
+    .image-with-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: background 0.4s ease;
+  }
+  .image-with-text .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+  .image-with-text.animate::before {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .image-with-text.animate .content {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </head>
 <body>
   
@@ -227,5 +250,19 @@
   <footer>
     &copy; 2025 ZenPaws Co. &nbsp;|&nbsp; Privacy · Refund · Terms
   </footer>
+<script>
+  const targetSection = document.querySelector('.image-with-text');
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          targetSection.classList.add('animate');
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+  observer.observe(targetSection);
+</script>
 </body>
 </html>
