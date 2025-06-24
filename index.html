@@ -6,9 +6,14 @@
   <title>ZenPaws Co. | Soothing the world, one paw at a time</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter&display=swap" rel="stylesheet">
   <style>
+    /* 🌐 Base styles and scrolling behavior */
     html, body {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
+      padding-top: 0px;
+      padding-bottom: 0px;
       height: 100%;
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
@@ -16,31 +21,42 @@
       background-color: #F7F4F0;
       color: #333;
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
+
+    /* 📌 Snapping section container */
     .snap-section {
       scroll-snap-align: start;
+      scroll-snap-stop: always;
       min-height: 100vh;
-      padding: 50px 20px;
+      padding: 100px 20px 50px;
       margin: 0 auto;
     }
+
+    /* 🧘 Header area (pinned) */
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
       background-color: #EADBD0;
       text-align: center;
-      padding: 60px 20px 40px;
-      max-width: 800px;
-      margin: 0 auto;
-      border-radius: 10px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+      font-size: 1.5rem;
+      margin: 0;
       color: #5A6B57;
     }
     header p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
+      font-size: 1rem;
+      margin: 0 0 5px;
       color: #5A6B57;
     }
     .cta-button {
@@ -58,6 +74,7 @@
       background-color: #8a715e;
     }
 
+    /* 🖼️ Hero image backgrounds */
     .image-hero,
     .image-with-text {
       background: url('https://zenpawsco.github.io/zenpaws-landing/resources/img1.png') center center / cover no-repeat;
@@ -67,8 +84,8 @@
       position: relative;
       background-repeat: no-repeat;
     }
-    }
 
+    /* ✨ Dimmer overlay animation */
     .image-with-text::before {
       content: "";
       position: absolute;
@@ -77,7 +94,6 @@
       z-index: 1;
       transition: background 0.4s ease;
     }
-
     .image-with-text .content {
       position: relative;
       z-index: 2;
@@ -86,17 +102,17 @@
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.4s ease;
+      margin-top: 20px;
     }
-
     .image-with-text.animate::before {
       background: rgba(0, 0, 0, 0.4);
     }
-
     .image-with-text.animate .content {
       opacity: 1;
       transform: translateY(0);
     }
 
+    /* 🐾 How It Feels box styling */
     .how-it-feels {
       display: flex;
       flex-direction: column;
@@ -123,11 +139,12 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
+    /* ❤️ Benefit testimonials */
     .benefits-upgraded {
       display: grid;
       grid-template-columns: 1fr;
       gap: 30px;
-      margin-top: 30px;
+      margin-top: 60px;
     }
     .benefit-upgraded {
       max-width: 700px;
@@ -147,11 +164,13 @@
       transform: translateY(-4px);
     }
 
+    /* 🛏️ Product section */
     .product-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      margin-top: 60px;
     }
     .product-section img {
       max-width: 100%;
@@ -159,42 +178,13 @@
       margin-bottom: 20px;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #EADBD0;
-      font-size: 0.9rem;
-      color: #5A6B57;
-    }
-      .parallax-wrapper {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .parallax-image {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-    .parallax-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-@media (max-width: 768px) {
-  .image-hero,
-  .image-with-text {
-    background-attachment: scroll;
-  }
-}
+    /* 📸 Instagram-like photo grid */
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      max-width: 800px;
-      margin: 40px auto 0;
+      max-width: 500px;
+      margin: 80px auto 120px;
     }
     .photo-grid img {
       width: 100%;
@@ -203,24 +193,43 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
-</style>
+
+    /* 🔻 Sticky Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 10;
+      text-align: center;
+      padding: 25px;
+      background: #EADBD0;
+      font-size: 0.9rem;
+      color: #5A6B57;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>ZenPaws Co.</h1>
+    <p>Soothing the world, one paw at a time</p>
+    <a class="cta-button" href="#product">Shop The Calm Bed</a>
+  </header>
 
-  <!-- 🧘‍♀️ Hero Section: Headline and CTA -->
+  <!-- 🐶 Real customer photo grid -->
   <section class="snap-section">
-    <header>
-      <h1>Soothing the world, one paw at a time</h1>
-      <p>Comfort, calm, and connection—designed for modern pets and their humans.</p>
-      <p style="margin-top: 30px;">We believe pets deserve peace, just like people do. That’s why we create simple tools that help them settle, rest, and feel safe — one moment at a time.</p>
-      <a class="cta-button" href="#product">Shop The Calm Bed</a>
-    </header>
+    <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">ZenPaws Moments</h2>
+    <div class="photo-grid">
+      <img src="resources/img2.png" alt="Dog on Bed 2">
+      <img src="resources/img3.png" alt="Dog on Bed 3">
+      <img src="resources/img4.png" alt="Dog on Bed 4">
+      <img src="resources/img5.png" alt="Dog on Bed 5">
+    </div>
   </section>
+  
+  <!-- 🌄 Fullscreen image section -->
+  <!--<section class="image-hero snap-section"></section> -->
 
-  <!-- 🐾 Static Image Section -->
-  <section class="image-hero snap-section"></section>
-
-  <!-- 🌙 Animated Image + Text Scroll Section -->
+  <!-- 💫 Animated section with overlay fade -->
   <section class="image-with-text snap-section">
     <div class="content">
       <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem;">How It Feels</h2>
@@ -232,7 +241,7 @@
     </div>
   </section>
 
-  <!-- 💬 Customer Testimonials / Benefit Highlights -->
+  <!-- ❤️ Customer experience highlights -->
   <section class="snap-section">
     <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">Why Pet Parents Love ZenPaws</h2>
     <div class="benefits-upgraded">
@@ -242,30 +251,22 @@
     </div>
   </section>
 
-  <!-- 🛏️ Product Details Section -->
+  <!-- 🛍️ Product highlight section -->
   <section class="product-section snap-section" id="product">
     <h2 style="font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">The Bed They Deserve</h2>
+    <img src="https://via.placeholder.com/600x400.png?text=ZenPaws+Donut+Bed" alt="Calming Donut Bed">
     <p style="max-width: 600px; color: #4A5B46;">Orthopedic support, raised rims for security, and a cloud-soft surface.<br>Trusted by 10,000+ cozy pets.</p>
     <a class="cta-button" href="#">Get Yours Now – $39.99</a>
   </section>
 
-  <!-- 🐶 Photo Grid Section -->
-  <section class="snap-section">
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">ZenPaws Moments</h2>
-    <div class="photo-grid">
-      <img src="resources/img2.png" alt="Dog on Bed 2">
-      <img src="resources/img3.png" alt="Dog on Bed 3">
-      <img src="resources/img4.png" alt="Dog on Bed 4">
-      <img src="resources/img5.png" alt="Dog on Bed 5">
-    </div>
-  </section>
 
-<!-- 📜 Footer Section -->
+
+  <!-- 📜 Sticky footer -->
   <footer>
     &copy; 2025 ZenPaws Co. &nbsp;|&nbsp; Privacy · Refund · Terms
   </footer>
 
-  <!-- ✨ Scroll-triggered Animation Script -->
+  <!-- ✨ Scroll-triggered animation -->
   <script>
     const targetSection = document.querySelector('.image-with-text');
     const observer = new IntersectionObserver(
@@ -280,6 +281,5 @@
     );
     observer.observe(targetSection);
   </script>
-
 </body>
 </html>
