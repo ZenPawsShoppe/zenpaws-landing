@@ -79,7 +79,7 @@
     /* 🖼️ Hero image backgrounds */
     .image-hero,
     .image-with-text {
-      background: url('https://zenpawsco.github.io/zenpaws-landing/resources/img1.png') center center / 120%r no-repeat;
+      background: url('https://zenpawsco.github.io/zenpaws-landing/resources/img1.png') center center / 110% no-repeat;
       background-attachment: fixed;
       background-size: cover;
       background-position: center center;
@@ -201,34 +201,17 @@
     }
 
     /* 🔻 Sticky Footer */
-footer {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  z-index: 10;
-  background: #EADBD0;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #5A6B57;
-}
-
-.footer-content {
-  max-width: 90%;
-  margin: 0 auto;
-  display: inline-block;
-  text-align: center;
-  word-spacing: 0.2rem;
-}
-
-footer a {
-  color: #5A6B57;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 10;
+      text-align: center;
+      padding: 25px;
+      background: #EADBD0;
+      font-size: 0.9rem;
+      color: #5A6B57;
+    }
 	
 	
   </style>
@@ -287,11 +270,9 @@ footer a:hover {
 
 
   <!-- 📜 Sticky footer -->
-<footer>
-  <div class="footer-content">
-    &copy; 2025 ZenPaws Co. &nbsp;|&nbsp; <a href="#">Privacy</a> · <a href="#">Refund</a> · <a href="#">Terms</a>
-  </div>
-</footer>
+  <footer>
+    &copy; 2025 ZenPaws Co. &nbsp;|&nbsp; Privacy · Refund · Terms
+  </footer>
 
   <!-- ✨ Scroll-triggered animation -->
   <script>
