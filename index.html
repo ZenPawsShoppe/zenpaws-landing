@@ -156,7 +156,37 @@
     <section class="welcome snap-section">
       We believe pets deserve peace, just like people do. That’s why we create simple tools that help them settle, rest, and feel safe — one moment at a time.
     </section>
-    <section class="snap-section" style="background: url('resources/img1.png') center center / cover no-repeat;">
+    <section class="snap-section image-only" style="background-image: url('resources/img1.png'); background-size: cover; background-position: center;"></section>
+
+    <section class="snap-section image-with-text" style="background-image: url('resources/img1.png'); background-size: cover; background-position: center; position: relative;">
+      <style>
+        .image-with-text::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 1;
+        }
+        .image-with-text .content {
+          position: relative;
+          z-index: 2;
+          color: white;
+          text-align: center;
+        }
+        .image-with-text .how-it-feels .feel-block {
+          background: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255,255,255,0.3);
+        }
+      </style>
+      <div class="content">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem;">How It Feels</h2>
+        <div class="how-it-feels">
+          <div class="feel-block">Your pup curls into the donut bed<br><strong>→ Relief</strong></div>
+          <div class="feel-block">Soft licking motion on the mat<br><strong>→ Focused calm</strong></div>
+          <div class="feel-block">You sip tea as they sleep peacefully<br><strong>→ Presence</strong></div>
+        </div>
+      </div>
+    </section>
       <h2 style="text-align:center; font-family: 'Playfair Display', serif; color: #5A6B57; font-size: 2rem;">How It Feels</h2>
       <div class="how-it-feels">
         <div class="feel-block">Your pup curls into the donut bed<br><strong>→ Relief</strong></div>
