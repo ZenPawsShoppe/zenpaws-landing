@@ -83,9 +83,9 @@
 
     <label for="size">Size</label>
     <select id="size" name="size">
-      <option value="small (up to 25 lbs.)">Small</option>
-      <!-- <option value="medium">Medium</option> -->
-      <option value="large (up to 45 lbs.)">Large</option>
+      <option value="small (up to 25lbs.)">Small</option>
+      <option value="medium (up to 55lbs.">Medium</option>
+      <option value="large (up to 100lbs.)">Large</option>
     </select>
 
     <label for="color">Color</label>
